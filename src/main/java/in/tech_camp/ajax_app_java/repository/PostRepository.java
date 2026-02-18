@@ -15,7 +15,7 @@ public interface PostRepository {
   List<PostEntity> findAll();
 
   @Insert("insert into posts (content) values (#{content})")
-  @Options(useGeneratedKeys = true, keyProperty = "id")
+   @Options(useGeneratedKeys = true, keyProperty = "id")
   void insert(PostEntity post);
 
   @Select("SELECT * FROM posts WHERE id = #{id}")
